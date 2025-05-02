@@ -28,7 +28,7 @@
   
   .heroTextContainer {
     max-width: 600px;
-    margin: 0;
+    margin: 20rem;
   }
   
   .heroTitle {
@@ -41,7 +41,7 @@
   @media (max-width: 768px) {
     .heroTitle {
       font-size: 25px;
-      text-align: center;
+      text-align: left;
     }
   }
   
