@@ -1,0 +1,79 @@
+/* src/components/Solutions/Solutions.module.css */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-direction: row;
+    padding: 40px 20px;
+    
+  }
+  
+  .containerMobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 50px;
+    text-align: center;
+  }
+  
+  .textContainer {
+    max-width: 500px;
+    text-align: left;
+  }
+  
+  .textContainerMobile {
+    max-width: 80%;
+    text-align: left;
+  }
+  
+  .gradientText {
+    background-image: linear-gradient(to right, #0090D8, #8FBAFF);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 48px;
+    font-weight: bold;
+  }
+  
+  .gradientTextMobile {
+    background-image: linear-gradient(to right, #0090D8, #8FBAFF);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: left;
+
+  }
+  
+  .subTitle {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .subTitleMobile {
+    font-size: 16px;
+    margin-bottom: 0px;
+  }
+  
+  .ul {
+    list-style: none;
+    padding: 0;
+    line-height: 2rem;
+  }
+  
+  .ulMobile {
+    list-style: none;
+    padding: 0;
+    line-height: 1.2rem;
+    font-size: 12px;
+  }
+  
+  .icon {
+    width: 1rem;
+    margin-right: 8px;
+  }
+  
