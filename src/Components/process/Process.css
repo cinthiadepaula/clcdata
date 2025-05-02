@@ -1,143 +1,142 @@
 .process-section {
-    background-color: rgba(217, 217, 217, 1);
-    ;
-    color: #000;
-    padding: 60px 20px;
-    text-align: center;
-  }
-  
-  .process-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 50px;
-  }
-  
-  .process-flow {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 80px;
-    position: relative;
-  }
-  
-  .process-step {
-    position: relative;
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .circle {
-    width: 64px;
-    height: 64px;
-    background-color: #2563eb;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 12px;
-    position: relative;
-  }
-  
-  /* Setas */
-  .process-step.up .circle::before,
-  .process-step.down .circle::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-  }
-  
-  .process-step.up .circle::before {
-    bottom: 100%;
-    border-bottom: 10px solid #2563eb;
-    margin-bottom: 8px;
-  }
-  
-  .process-step.down .circle::after {
-    top: 100%;
-    border-top: 10px solid #2563eb;
-    margin-top: 8px;
-  }
-  
-  /* Título e descrição */
-  .step-title {
-    font-weight: bold;
-    font-size: 1rem;
-    margin-bottom: 6px;
-  }
-  
-  .step-desc {
-    font-size: 0.875rem;
-    color: #333;
-  }
-  
-  /* Conector entre círculos */
-  .connector {
-    position: absolute;
-    right: -80px;
-    top: 32px;
-    width: 80px;
-    height: 2px;
-    background-color: #2563eb;
-  }
+  background-color: rgba(217, 217, 217, 1);
+  ;
+  color: #000;
+  padding: 60px 20px;
+  text-align: center;
+}
 
- /* --- Estilo para a curva SVG --- */
+.process-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.process-flow {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 80px;
+  position: relative;
+}
+
+.process-step {
+  position: relative;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.circle {
+  width: 64px;
+  height: 64px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+/* Setas */
+.process-step.up .circle::before,
+.process-step.down .circle::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+.process-step.up .circle::before {
+  bottom: 100%;
+  border-bottom: 10px solid #2563eb;
+  margin-bottom: 8px;
+}
+
+.process-step.down .circle::after {
+  top: 100%;
+  border-top: 10px solid #2563eb;
+  margin-top: 8px;
+}
+
+/* Título e descrição */
+.step-title {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.step-desc {
+  font-size: 0.875rem;
+  color: #333;
+}
+
+/* Conector entre círculos */
+.connector {
+  position: absolute;
+  right: -80px;
+  top: 32px;
+  width: 80px;
+  height: 2px;
+  background-color: #2563eb;
+}
+
+/* --- Estilo para a curva SVG --- */
 .curved-divider-svg {
-    width: 100%;
-    padding-bottom: 1rem;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    background-color:rgba(3, 0, 20, 1); /* cor da próxima section */
-  }
-  
-  .curved-divider-svg img {
-    width: 10%;
-    fill: rgba(217, 217, 217, 1);
-    ;
-    display: block;
+  width: 100%;
+  padding-bottom: 1rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background-color:rgba(3, 0, 20, 1); /* cor da próxima section */
+}
+
+.curved-divider-svg img {
+  width: 10%;
+  fill: rgba(217, 217, 217, 1);
+  ;
+  display: block;
+}
+
+.curved-dividertop-svg {
+  width: 100%;
+  padding-bottom: 1rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background-color:rgba(217, 217, 217, 1); /* cor da próxima section */
+}
+
+.curved-dividertop-svg img {
+  width: 10%;
+  fill: rgba(217, 217, 217, 1);
+  ;
+  display: block;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .connector {
+    display: none;
   }
 
-  .curved-dividertop-svg {
+  .process-flow {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .process-step {
     width: 100%;
-    padding-bottom: 1rem;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    background-color:rgba(217, 217, 217, 1); /* cor da próxima section */
   }
-  
-  .curved-dividertop-svg img {
-    width: 10%;
-    fill: rgba(217, 217, 217, 1);
-    ;
-    display: block;
-  }
-  
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .connector {
-      display: none;
-    }
-  
-    .process-flow {
-      flex-direction: column;
-      gap: 40px;
-    }
-  
-    .process-step {
-      width: 100%;
-    }
-  }
-  
+}

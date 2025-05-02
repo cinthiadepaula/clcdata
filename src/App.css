@@ -1,15 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-html{
-  background: rgba(3, 0, 20, 1);
+*, *::before, *::after {
+  box-sizing: border-box;
 }
-body {
+
+html, body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  font-optical-sizing: auto;
-  color: white;
   padding: 0;
   overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  background: rgba(3, 0, 20, 1);
+  color: white;
+  font-family: 'Arial', sans-serif;
+  font-optical-sizing: auto;
+}
+* {
+  box-sizing: inherit;
 }
 
 a {
@@ -31,10 +38,10 @@ ul {
 }
 
 .card {
-  
   background: rgb(255, 255, 255);
   padding: 20px;
-  width: 250px;
+  max-width: 250px;
+  width: 100%;
   text-align: left;
 }
 
@@ -65,6 +72,7 @@ ul {
 
 .nav {
   display: flex;
-  gap: 20px;
-  font-size: 14px;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
