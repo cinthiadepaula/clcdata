@@ -17,8 +17,8 @@ function App() {
       <EclipseBackground />
         <Hero />
         <About />
-        <Process />
         <Solutions />
+        <Process />
         <Contact />
        <Footer />
        

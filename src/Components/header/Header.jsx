@@ -28,8 +28,8 @@ function Header() {
         ) : (
           <nav className={styles.navDesktop}>
             <a href="#about" className={styles.link}>Quem somos</a>
-            <a href="#process" className={styles.link}>Nossos Processos</a>
             <a href="#solution" className={styles.link}>O que fazemos</a>
+            <a href="#process" className={styles.link}>Nossos Processos</a>
             <a href="#contact" className={styles.link}>Contato</a>
           </nav>
         )}
@@ -38,8 +38,8 @@ function Header() {
         <div className={styles.drawer}>
           <nav className={styles.navMobile}>
             <a href="#about" className={styles.link} onClick={() => setMenuOpen(false)}>Quem somos</a>
-            <a href="#process" className={styles.link} onClick={() => setMenuOpen(false)}>Nossos Processos</a>
             <a href="#solution" className={styles.link} onClick={() => setMenuOpen(false)}>O que fazemos</a>
+            <a href="#process" className={styles.link} onClick={() => setMenuOpen(false)}>Nossos Processos</a>
             <a href="#contact" className={styles.link} onClick={() => setMenuOpen(false)}>Contato</a>
           </nav>
         </div>

@@ -15,7 +15,7 @@
   .containerMobile {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     gap: 30px;
     padding: 40px 50px;
     text-align: center;
@@ -27,7 +27,7 @@
   }
   
   .textContainerMobile {
-    max-width: 80%;
+    max-width: 100%;
     text-align: left;
   }
   
@@ -37,6 +37,8 @@
     color: transparent;
     font-size: 48px;
     font-weight: bold;
+    text-align: left;
+    margin-left: 2rem;
   }
   
   .gradientTextMobile {
@@ -56,7 +58,7 @@
   
   .subTitleMobile {
     font-size: 16px;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
   }
   
   .ul {
@@ -68,7 +70,7 @@
   .ulMobile {
     list-style: none;
     padding: 0;
-    line-height: 1.2rem;
+    line-height: 1rem;
     font-size: 12px;
   }
   

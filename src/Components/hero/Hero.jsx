@@ -13,24 +13,20 @@ function Hero() {
   }, []);
 
   useEffect(() => {
+    document.documentElement.style.setProperty('--desktop-image', `url(${backgroundHeader})`);
     document.documentElement.style.setProperty('--mobile-image', `url(${backgroundHeader})`);
   }, []);
 
   return (
-    <section
+    <header
       className={`${styles.hero} ${isMobile ? styles.heroMobile : ""}`}
-      style={{
-        backgroundImage: !isMobile
-          ? `linear-gradient(to right, rgba(3, 0, 20, 0.76) 40%, transparent, rgba(3, 0, 20, 0.76) 40%), url(${backgroundHeader})`
-          : undefined,
-      }}
     >
       <div className={styles.heroTextContainer}>
         <h1 className={styles.heroTitle}>
           Transformamos <br /> dados em estratégias
         </h1>
       </div>
-    </section>
+    </header>
   );
 }
 

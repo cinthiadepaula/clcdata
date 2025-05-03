@@ -1,0 +1,40 @@
+.footerSection {
+    padding: 1rem 0;
+  }
+  
+  .line {
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #1a1a2e, transparent);
+    border: none;
+    margin: 20px auto;
+  }
+  
+  .footerContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: #fff;
+    font-size: 10px;
+    opacity: 0.5;
+    text-align: center;
+  }
+  
+  .footerIcon {
+    width: 80px;
+  }
+  
+  /* Estilo responsivo */
+  @media (max-width: 768px) {
+    .footerContent {
+      flex-direction: column;
+      gap: 0.5rem;
+      font-size: 12px;
+    }
+  
+    .footerIcon {
+      width: 60px;
+    }
+  }
+  

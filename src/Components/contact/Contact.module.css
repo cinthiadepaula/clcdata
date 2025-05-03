@@ -74,6 +74,11 @@
   
   /* Versão Mobile */
   @media screen and (max-width: 768px) {
+    .container{
+      margin: 0;
+      padding: 1rem;
+    }
+
     .gradientText {
       font-size: 24px;
       text-align: center;
@@ -93,5 +98,18 @@
       width: 20px;
       height: 20px;
     }
+
+    .glow {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 800px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(0, 144, 216, 0.4) 0%, rgba(0, 0, 0, 0) 60%);
+      filter: blur(100px);
+      pointer-events: none;
+    }
+    
   }
   

@@ -1,0 +1,94 @@
+#process {
+  background-color: #D9D9D9;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  color: #000;
+}
+
+#process h2 {
+  text-align: left;
+  font-size: 35px;
+  font-weight: bold;
+  color: #0d1e40;
+  margin-left: 20rem;
+  margin-bottom: 2rem;
+}
+
+.process-flow {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin: 0 15rem;
+  flex-wrap: wrap;
+}
+
+.process-card {
+  width: 10rem;
+  height: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.process-card h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.process-card p {
+  font-size: 10px;
+  text-align: left;
+}
+
+.process-svg {
+  width: 50%;
+  height: 230px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  #process h2 {
+    font-size: 22px;
+    line-height: 1.2rem;
+    margin-left: 0rem;
+    margin-bottom: 5rem;
+  }
+
+  .process-flow {
+    gap: 1.2rem;
+    margin: 0rem;
+  }
+
+  .process-card {
+    width: 5rem;
+    height: 3rem;
+  }
+
+  .process-card h3 {
+    font-size: 12px;
+    
+  }
+
+  .process-card p {
+    font-size: 8px;
+  }
+
+  .process-svg {
+    width: 90%;
+    height: 120px;
+  }
+  .curved-divider-svg img{
+    width: 6rem;
+  }
+
+  .curved-dividertop-svg {
+    background-color: #D9D9D9;
+  }
+  .curved-dividertop-svg img{
+    width: 6rem;
+  }
+}
