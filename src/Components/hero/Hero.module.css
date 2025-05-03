@@ -29,11 +29,13 @@
 }
 
 .heroTextContainer {
-  max-width: 600px;
+
+  max-width: 800px;
   color: white;
 }
 
 .heroTitle {
+ 
   font-weight: bold;
   color: rgba(105, 197, 255, 1);
   font-size: 48px;
