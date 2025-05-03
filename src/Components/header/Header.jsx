@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./Header.module.css";
 import logo from "./../../assets/logo.png";
 
+
 function Header() {
   const [isMobile, setIsMobile] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);

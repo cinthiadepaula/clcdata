@@ -1,0 +1,32 @@
+.typingLine {
+    display: inline-flex;
+    font-family: 'Inter', Courier, monospace;
+    color: #69c5ff;
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+  
+  .char {
+    display: inline-block;
+  }
+  
+  .cursor {
+    display: inline-block;
+    width: 1ch;
+    animation: blink 1s step-end infinite;
+    color: #69c5ff;
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+  @media (max-width: 768px) {
+    .typingLine {
+      font-size: 1.8rem;
+    }
+  }
+  

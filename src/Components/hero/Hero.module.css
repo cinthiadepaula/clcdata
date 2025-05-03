@@ -29,7 +29,8 @@
 }
 
 .heroTextContainer {
-
+  margin-left: 17rem;
+text-align: left;
   max-width: 800px;
   color: white;
 }

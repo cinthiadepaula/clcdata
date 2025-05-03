@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import backgroundHeader from "./../../assets/background_header.png";
 import styles from "./Hero.module.css";
+import { TypingLine } from "./TypingLine.jsx";
 
 function Hero() {
   const [isMobile, setIsMobile] = useState(false);
 
+
+  
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth <= 768);
     checkMobile();
@@ -18,13 +21,10 @@ function Hero() {
   }, []);
 
   return (
-    <header
-      className={`${styles.hero} ${isMobile ? styles.heroMobile : ""}`}
-    >
+    <header className={`${styles.hero} ${isMobile ? styles.heroMobile : ""}`}>
       <div className={styles.heroTextContainer}>
-        <h1 className={styles.heroTitle}>
-          Transformamos <br /> dados em estratégias
-        </h1>
+        <TypingLine text="Transformamos" delay={0.5} />
+        <TypingLine text="dados em estratégias" delay={2} />
       </div>
     </header>
   );
