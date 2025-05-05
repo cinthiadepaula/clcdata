@@ -81,4 +81,10 @@
     font-size: 30px; /* Ajusta o tamanho da fonte no mobile */
     text-align: left; /* Centraliza o texto no mobile */
   }
+
+  .iconSeta {
+   width: 3rem;
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+  }
 }

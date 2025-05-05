@@ -11,7 +11,7 @@ function About() {
           <h2 className={styles.gradientText}>
             Quem<br />Somos
           </h2>
-          <img src={iconseta} alt="Ícone" style={{ width: "50px" }} />
+          <img src={iconseta} alt="Ícone" className={styles.iconSeta} />
         </div>
         <p className={styles.paragraph}>
           Somos especialistas em transformar dados em soluções sob medida. Trabalhamos de forma estratégica, utilizando relatórios e ferramentas personalizadas para identificar problemas, gerenciar situações desafiadoras e entender a fundo o ambiente digital de cada cliente.
