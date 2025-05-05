@@ -69,12 +69,12 @@ const Process = () => {
         <div className="process-flow">
           
           <div className="process-card analistas">
-            <h3>Analista de dados</h3>
+            <h3>2. Analista de dados</h3>
             <p>Analistas estruturam e treinam classificadores de dados específicos para cada cliente. Os analistas de dados realizam verificações frequentes de qualidade.</p>
           </div>
 
           <div className="process-card especialistas">
-            <h3>Especialistas</h3>
+            <h3>4. Especialistas</h3>
             <p>Especialistas recebem dados organizados por meio de dashboards e criam análises baseadas em narrativas.</p>
           </div>
         </div>
@@ -124,17 +124,17 @@ const Process = () => {
         <div className="process-flow_2">
           
           <div className="process-card dados">
-            <h3>Dados</h3>
+            <h3>1. Dados</h3>
             <p>Os dados são coletados através de diversas fontes.</p>
           </div>
 
           <div className="process-card ia">
-            <h3>IA</h3>
+            <h3>3. IA</h3>
             <p>A equipe de IA desenvolve agentes com base no trabalho dos analistas de dados, realizando verificações frequentes de controle de qualidade.</p>
           </div>
 
           <div className="process-card produtos">
-            <h3>Produtos e soluções</h3>
+            <h3>5. Produtos e soluções</h3>
             <p>A equipe de desenvolvimento cria produtos em tempo real adaptados às necessidades dos clientes.</p>
           </div>
         </div>

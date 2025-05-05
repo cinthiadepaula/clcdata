@@ -26,6 +26,9 @@
   background-position: center, center;
   background-repeat: no-repeat;
   justify-content: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+ 
 }
 
 .heroTextContainer {
@@ -33,6 +36,7 @@
 text-align: left;
   max-width: 800px;
   color: white;
+
 }
 
 .heroTitle {
@@ -50,6 +54,9 @@ text-align: left;
     padding: 1.0rem;
     height: 20%;
     background-size: contain;
+    
+    margin-bottom: 0;
+
   }
 
   .heroTitle {
