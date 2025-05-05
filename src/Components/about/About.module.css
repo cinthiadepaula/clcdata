@@ -62,14 +62,15 @@
 /* Responsivo para telas menores */
 @media (max-width: 768px) {
   .container{
-    background-color: red;
+   margin-top: -50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
   .textContainer {
-    background-color: aqua;
+   
     width: 100%;
+    max-width: 500px;
     margin: 0; /* Remove a margem esquerda no mobile */
     padding: 0; /* Adiciona algum padding no mobile para espaçamento */
     text-align: left; /* Centraliza o texto no mobile */
@@ -77,7 +78,7 @@
   }
 
   .gradientText {
-    font-size: 26px; /* Ajusta o tamanho da fonte no mobile */
+    font-size: 30px; /* Ajusta o tamanho da fonte no mobile */
     text-align: left; /* Centraliza o texto no mobile */
   }
 }
