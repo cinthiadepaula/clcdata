@@ -1,84 +1,80 @@
 .container {
- 
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 10px;
-  max-width: 100%;
-  padding-top: 0;
-  margin-top: -5rem;
- 
-  padding: 25px;
-  overflow: hidden;
+  justify-content: center;
+  gap: clamp(20px, 5vw, 60px);
+  max-width: 1200px;
+  padding: clamp(20px, 5vw, 60px);
+  margin: 0 auto;
   box-sizing: border-box;
   z-index: 1;
+  flex-wrap: wrap;
 }
-  .glow {
-    position: absolute;
-    right: 0;
-    top: 70%;
-    width: 100vw;
-    height: 300px;
-    background: radial-gradient(circle, #00305D 10%, rgba(0, 0, 0, 0) 60%);
-    z-index: 0;
-    pointer-events: none;
-    filter: blur(80px);
+
+.glow {
+  position: absolute;
+  right: 0;
+  top: 70%;
+  width: 80vw;
+  height: 300px;
+  background: radial-gradient(circle, #00305D 10%, rgba(0, 0, 0, 0) 60%);
+  z-index: 0;
+  pointer-events: none;
+  filter: blur(80px);
+}
+
+.textContainer {
+  flex: 1;
+  min-width: 150px;
+  max-width: 200px;
+  text-align: left;
+  z-index: 2;
+}
+
+.gradientText {
+  font-size: clamp(28px, 6vw, 48px);
+  margin-bottom: clamp(10px, 2vw, 20px);
+  background-image: linear-gradient(to right, #0090D8, #8FBAFF);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.iconSeta {
+  width: clamp(30px, 5vw, 50px);
+}
+
+.paragraph {
+  flex: 2;
+  max-width: 400px;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(14px, 1vw, 18px);
+  line-height: 1.2;
+  color: white;
+  text-align: left;
+  z-index: 2;
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: clamp(20px, 6vw, 40px);
   }
-  
+
   .textContainer {
     width: 100%;
-    max-width: 400px;
-    text-align: left;
-    z-index: 10;
   }
-  
-  .gradientText {
-    font-size: 38px;
-    margin-bottom: 16px;
-    background-image: linear-gradient(to right, #0090D8, #8FBAFF);
-    -webkit-background-clip: text;
-    color: transparent;
-    font-weight: bold;
-  }
-  
+
   .paragraph {
     width: 100%;
-    max-width: 600px;
-    text-align: left ;
-    font-family: "Inter", sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    z-index: 2;
   }
-  
-  /* Desktop: 768px+ */
-  @media (min-width: 768px) {
-    .container {
-      margin: 0rem 20rem;
-      
-      width: 50%;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      gap: 0px;
-      padding: 0px;
-    }
-  
-    .gradientText {
 
-      font-size: 48px;
-    }
-  
-    .paragraph {
-
-      font-size: 12px;
-    }
-  
-    .glow {
-      top: 35rem;
-      right: -30px;
-      width: 60rem;
-    }
+  .gradientText {
+    text-align: left;
   }
-  
+}
