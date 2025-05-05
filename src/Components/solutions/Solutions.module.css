@@ -1,83 +1,69 @@
-
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0rem 15vw;
-    flex-direction: row;
-    padding: 35px 0px;
-    
-  }
-  
-  .containerMobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(20px, 1vw, 60px);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(20px, 5vw, 60px);
+  flex-wrap: wrap;
+  box-sizing: border-box;
+ 
+}
 
-    margin-top: -2rem;
-    display: flex;
+.textContainer {
+  max-width: 600px;
+  text-align: left;
+  flex: 1;
+}
+
+.gradientText {
+  min-width: 150px;
+  max-width: 250px;
+  font-size: clamp(32px, 3.5vw, 64px);
+  background-image: linear-gradient(to right, #0090D8, #8FBAFF);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  flex: 1;
+  text-align: left;
+  margin-left: 12vw;
+}
+
+.subTitle {
+  font-size: clamp(18px, 2vw, 28px);
+  margin-bottom: clamp(10px, 1.5vw, 20px);
+  font-style: italic;
+}
+
+.ul {
+  list-style: none;
+  padding: 0;
+  font-size: clamp(14px, 1.5vw, 18px);
+  line-height: 1.8;
+}
+
+.icon {
+  width: clamp(14px, 1.2vw, 18px);
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Mobile ajustes */
+@media (max-width: 768px) {
+  .container {
+   
     flex-direction: column;
-    align-items: left;
-    gap: 0px;
-    padding: 30px 25px;
-    text-align: center;
-  }
-  
-  .textContainer {
-    max-width: 500px;
-    text-align: left;
-  }
-  
-  .textContainerMobile {
-    max-width: 100%;
-    text-align: left;
-  
-  }
-  
-  .gradientText {
-    background-image: linear-gradient(to right, #0090D8, #8FBAFF);
-    -webkit-background-clip: text;
-    color: transparent;
-    font-size: 4vw;
-    font-weight: bold;
-    text-align: left;
-    margin-left: 0vw;
-  }
-  
-  .gradientTextMobile {
-    background-image: linear-gradient(to right, #0090D8, #8FBAFF);
-    -webkit-background-clip: text;
-    color: transparent;
-    font-size: 36px;
-    font-weight: bold;
-    text-align: left;
+    align-items: flex-start;
 
+    gap: 2rem;
   }
-  
-  .subTitle {
-    font-size: 2vw;
-    margin-bottom: 2rem;
+
+  .gradientText {
+   margin: 0;
+    text-align: left;
   }
-  
-  .subTitleMobile {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .ul {
-    list-style: none;
-    padding: 0;
-    line-height: 2rem;
-  }
-  
-  .ulMobile {
-    list-style: none;
-    padding: 0;
-    line-height: 1.5rem;
-    font-size: 16px;
-  }
-  
-  .icon {
-    width: 1rem;
-    margin-right: 8px;
-  }
-  
+}

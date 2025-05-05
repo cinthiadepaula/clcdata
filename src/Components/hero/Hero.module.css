@@ -11,9 +11,9 @@
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   box-sizing: border-box;
-  padding: 2rem;
+  padding: 3rem;
 }
 
 .heroMobile {
