@@ -8,15 +8,15 @@
 html, body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
   width: 100%;
-  overflow-y: auto;
+  overflow-x: hidden; /* Impede o overflow horizontal */
+  overflow-y: auto; /* Permite o overflow vertical se necessário */
   box-sizing: border-box;
   background: rgba(3, 0, 20, 1);
   color: white;
   font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
 }
+
 * {
   box-sizing: inherit;
 }
@@ -33,22 +33,14 @@ a {
 
 section {
   padding: 60px 20px;
+  width: 100%; /* Garante que a largura de cada seção não ultrapasse a largura do container */
+  box-sizing: border-box; /* Inclui o padding dentro da largura total */
 }
 
-ul {
-  padding-left: 20px;
-}
 
-.card {
-  background: rgb(255, 255, 255);
-  padding: 20px;
-  max-width: 250px;
-  width: 100%;
-  text-align: left;
-}
+
 
 .header {
- 
   padding: 20px 20px;
   display: flex;
   justify-content: space-between;
@@ -62,6 +54,7 @@ ul {
   border-radius: 0 0 16px 16px;
   color: white;
   overflow: hidden;
+  width: 100%;
 }
 
 
@@ -75,6 +68,23 @@ ul {
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  max-width: 100%; /* Garante que o conteúdo não ultrapasse a largura da tela */
+  overflow-x: hidden; /* Impede o overflow horizontal */
+  overflow-y: auto; /* Permite o overflow vertical, se necessário */
+  margin: 0 auto; /* Centraliza o conteúdo na tela */
+  padding: 0 0px; /* Padding para dar algum espaçamento nas bordas */
+}
+
+.container {
+  max-width: 1200px; /* Limita a largura do conteúdo */
+  width: 100%;
+  margin: 0 auto; /* Centraliza o container */
+  padding: 0 20px; /* Padding lateral */
 }
 
 

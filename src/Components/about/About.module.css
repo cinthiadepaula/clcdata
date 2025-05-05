@@ -3,10 +3,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: center; /* Alterei para space-between para melhor distribuição */
   gap: clamp(20px, 5vw, 60px);
   max-width: 1200px;
-  padding: clamp(20px, 5vw, 60px);
+  padding: clamp(20px, 1vw, 60px);
   margin: 0 auto;
   box-sizing: border-box;
   z-index: 1;
@@ -17,21 +17,22 @@
   position: absolute;
   right: 0;
   top: 70%;
-  width: 80vw;
-  height: 300px;
+  width: 80vw;  /* Usando 'vw' para adaptar o tamanho da área no fundo */
+  height: 20vw; /* Ajusta a altura também */
   background: radial-gradient(circle, #00305D 10%, rgba(0, 0, 0, 0) 60%);
   z-index: 0;
   pointer-events: none;
   filter: blur(80px);
 }
 
+
 .textContainer {
   flex: 1;
-
   min-width: 150px;
   max-width: 250px;
   text-align: left;
   z-index: 2;
+  margin-left: 12rem; /* Mesma margem do Hero */
 }
 
 .gradientText {
@@ -42,41 +43,41 @@
   color: transparent;
   font-weight: bold;
   line-height: 1.2;
+  text-align: left; /* Alinhamento à esquerda */
 }
-
 .iconSeta {
   width: clamp(30px, 5vw, 50px);
 }
 
 .paragraph {
   flex: 2;
-  max-width: 400px;
+  max-width: 600px; /* Aumentei a largura máxima para mais flexibilidade */
   font-family: "Inter", sans-serif;
-  font-size: clamp(14px, 1vw, 18px);
-  line-height: 1.2;
+  font-size: clamp(14px, 1vw, 18px); /* Ajustei o font-size para flexibilidade */
+  line-height: 1.6;  /* Aumentei o line-height para melhor legibilidade */
   color: white;
   text-align: left;
   z-index: 2;
 }
-
 /* Responsivo para telas menores */
 @media (max-width: 768px) {
-  .container {
+  .container{
+    background-color: red;
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: clamp(20px, 6vw, 40px);
-    margin-top: -60px;
+    justify-content: center;
   }
-
   .textContainer {
+    background-color: aqua;
     width: 100%;
-  }
+    margin: 0; /* Remove a margem esquerda no mobile */
+    padding: 0; /* Adiciona algum padding no mobile para espaçamento */
+    text-align: left; /* Centraliza o texto no mobile */
 
-  .paragraph {
-    width: 100%;
   }
 
   .gradientText {
-    text-align: left;
+    font-size: 26px; /* Ajusta o tamanho da fonte no mobile */
+    text-align: left; /* Centraliza o texto no mobile */
   }
 }

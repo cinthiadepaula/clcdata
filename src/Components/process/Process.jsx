@@ -6,32 +6,23 @@ import curva_top from "./../../assets/curva_top.svg";
 const steps = [
   {
     number: 1,
-    title: "Dados",
-    description: "Os dados são coletados através de diversas fontes.",
+   
   },
   {
     number: 2,
-    title: "Analista de dados",
-    description:
-      "Analistas estruturam e treinam classificadores de dados específicos para cada cliente. Os analistas de dados realizam verificações frequentes de qualidade.",
+   
   },
   {
     number: 3,
-    title: "IA",
-    description:
-      "A equipe de IA desenvolve agentes com base no trabalho dos analistas de dados, realizando verificações frequentes de controle de qualidade.",
+
   },
   {
     number: 4,
-    title: "Especialistas",
-    description:
-      "Especialistas recebem dados organizados por meio de dashboards e criam análises baseadas em narrativas.",
+
   },
   {
     number: 5,
-    title: "Produtos e soluções",
-    description:
-      "A equipe de desenvolvimento cria produtos em tempo real adaptados às necessidades dos clientes.",
+   
   },
 ];
 
