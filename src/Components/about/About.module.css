@@ -18,7 +18,7 @@
 .glow {
   position: absolute;
   right: 0;
-  top: 70%;
+  top: 90%;
   width: 80vw;
   height: 20vw;
   background: radial-gradient(circle, #00305D 10%, rgba(0, 0, 0, 0) 60%);
@@ -66,8 +66,15 @@
 }
 
 @media (max-width: 768px) {
+  .contentWrapper{
+    margin-top: -90px;
+    display: flex;
+    flex-direction: column;
+    
+  }
   .textContainer {
     width: 100%;
+    font-weight: 400;
     max-width: 500px;
     margin: 0;
     padding: 1rem;
@@ -75,7 +82,7 @@
   }
 
   .gradientText {
-    font-size: 30px;
+    font-size: 40px;
     text-align: left;
   }
 

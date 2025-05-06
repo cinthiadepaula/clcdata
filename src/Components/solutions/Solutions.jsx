@@ -1,10 +1,14 @@
 import React from "react";
 import check from "./../../assets/fi.svg";
 import styles from "./Solutions.module.css";
-import Container from "../container/Container"; 
+import Container from "../container/Container";
+import curva from "./../../assets/curva_top.svg";
+
 
 function Solutions() {
   return (
+    <>
+   
     <section id="solution" className={styles.section}>
       <Container>
         <div className={styles.contentWrapper}>
@@ -37,7 +41,13 @@ function Solutions() {
           </div>
         </div>
       </Container>
+      
     </section>
+    <div className={styles.dividersvg}>
+    <img src={curva} alt="Divisor Curvado" />
+  </div>
+  
+    </>
   );
 }
 

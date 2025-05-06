@@ -24,7 +24,7 @@
   text-align: left;
   color: white;
   max-width: 800px;
-  margin-left: 5vw;
+  margin-left: 6vw;
 }
 
 .hero__title {
@@ -37,7 +37,10 @@
 
 @media (max-width: 768px) {
   .hero__textContainer {
-    margin: 0 auto;
-    padding: 1rem;
+    margin: 3 auto;
+    padding-left: 2rem;
+    line-height: 0.9rem;
+    height: 90%;
+    font-size: 2rem;
   }
 }

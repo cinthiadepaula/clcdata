@@ -34,11 +34,10 @@ const stylesInline = {
 const Process = () => {
   return (
     <>
-      <div className="curved-dividertop-svg">
-        <img src={curva_top} alt="Divisor Curvado" />
-      </div>
+        
 
       <section id="process">
+        
         <Container>
           <div className="contentWrapper">
             <h2>
