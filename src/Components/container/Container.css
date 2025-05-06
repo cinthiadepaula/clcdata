@@ -1,0 +1,8 @@
+/* Container.module.css */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem; /* Espaço lateral para evitar colar na borda */
+  width: 100%;
+  box-sizing: border-box;
+}

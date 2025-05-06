@@ -1,42 +1,60 @@
-.container {
+/* Estilo comum para a seção */
+.section {
+  padding: clamp(40px, 5vw, 100px) 0;
+  position: relative;
+  background-color: #010016;
+  color: white;
+  z-index: 1;
+  width: 100%; /* Garante que a seção ocupe 100% da largura */
+  box-sizing: border-box;
+  padding-left: 10rem;
+}
+
+.contentWrapper {
+  
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: center; /* Alinha todos os itens ao centro */
   align-items: center;
-  gap: clamp(20px, 1vw, 60px);
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: clamp(20px, 5vw, 60px);
-  flex-wrap: wrap;
+  gap: clamp(20px, 5vw, 60px);
+  padding: clamp(20px, 1vw, 60px);
+  margin: 0 auto; /* Centraliza o conteúdo */
+  width: 100%;
+  max-width: 1200px; /* Ajusta a largura máxima */
   box-sizing: border-box;
- 
+  z-index: 1;
+  flex-wrap: wrap;
 }
 
 .textContainer {
-  max-width: 600px;
-  text-align: left;
+ 
   flex: 1;
+  min-width: 150px;
+  max-width: 600px; /* Define a largura máxima da seção de texto */
+  text-align: left;
+  z-index: 2;
+  margin-left: 0px;
+ 
+  
 }
 
 .gradientText {
-  min-width: 150px;
-  max-width: 250px;
-  font-size: clamp(32px, 3.5vw, 64px);
+
+  font-size: clamp(28px, 6vw, 48px);
+  margin-bottom: clamp(10px, 2vw, 20px);
   background-image: linear-gradient(to right, #0090D8, #8FBAFF);
   -webkit-background-clip: text;
   color: transparent;
   font-weight: bold;
   line-height: 1.2;
-  margin-bottom: 1rem;
-  flex: 1;
   text-align: left;
-  margin-left: 12vw;
 }
 
 .subTitle {
   font-size: clamp(18px, 2vw, 28px);
   margin-bottom: clamp(10px, 1.5vw, 20px);
   font-style: italic;
+  text-align: left;
 }
 
 .ul {
@@ -44,26 +62,82 @@
   padding: 0;
   font-size: clamp(14px, 1.5vw, 18px);
   line-height: 1.8;
+  text-align: left;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 10px;
+  transition: transform 0.3s ease;
+}
+
+.listItem:hover {
+  transform: scale(1.05);
 }
 
 .icon {
   width: clamp(14px, 1.2vw, 18px);
   margin-right: 8px;
   vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: rotate(20deg);
+}
+
+.glow {
+  position: absolute;
+  right: 0;
+  top: 70%;
+  width: 80vw;
+  height: 20vw;
+  background: radial-gradient(circle, #00305D 10%, rgba(0, 0, 0, 0) 60%);
+  z-index: 0;
+  pointer-events: none;
+  filter: blur(80px);
+  max-width: 100vw;
 }
 
 /* Mobile ajustes */
 @media (max-width: 768px) {
-  .container {
-   
+  .contentWrapper {
+    padding: 20px;
     flex-direction: column;
     align-items: flex-start;
-
-    gap: 2rem;
   }
 
   .gradientText {
-   margin: 0;
+    font-size: 30px;
     text-align: left;
+  }
+
+  .subTitle {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .ul {
+    padding: 0;
+  }
+
+  .listItem {
+    font-size: clamp(16px, 2.5vw, 20px);
+  }
+
+  .textContainer {
+    width: 100%;
+    max-width: 500px;
+    margin: 0;
+    padding: 1rem;
+    text-align: left;
+  }
+
+  .iconSeta {
+    width: 3rem;
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
   }
 }

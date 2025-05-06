@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from "react";
-import backgroundHeader from "./../../assets/background_header.png";
+import backgroundHeader from "../../assets/background_header.png";
 import styles from "./Hero.module.css";
 import { TypingLine } from "./TypingLine.jsx";
+import Container from "../container/Container.jsx";
 
 function Hero() {
   const [isMobile, setIsMobile] = useState(false);
 
-
-  
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    const checkMobile = () => {
+      if (typeof window !== "undefined") {
+        setIsMobile(window.innerWidth <= 768);
+      }
+    };
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
@@ -20,12 +23,16 @@ function Hero() {
     document.documentElement.style.setProperty('--mobile-image', `url(${backgroundHeader})`);
   }, []);
 
+  const heroClasses = `${styles.hero} ${isMobile ? styles.heroMobile : ""}`;
+
   return (
-    <header className={`${styles.hero} ${isMobile ? styles.heroMobile : ""}`}>
-      <div className={styles.heroTextContainer}>
-        <TypingLine text="Transformamos" delay={0.5} />
-        <TypingLine text="dados em estratégias" delay={2} />
-      </div>
+    <header className={heroClasses}>
+      <Container>
+        <div className={styles.hero__textContainer}>
+          <TypingLine text="Transformamos" delay={0.5} />
+          <TypingLine text="dados em estratégias" delay={2} />
+        </div>
+      </Container>
     </header>
   );
 }

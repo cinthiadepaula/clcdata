@@ -1,32 +1,17 @@
 import React from "react";
-import "./Process.css";
 import curva from "./../../assets/curva_bottom.svg";
 import curva_top from "./../../assets/curva_top.svg";
+import Container from "../container/Container";
+import "./Process.css"; // Mantém seus estilos
 
 const steps = [
-  {
-    number: 1,
-   
-  },
-  {
-    number: 2,
-   
-  },
-  {
-    number: 3,
-
-  },
-  {
-    number: 4,
-
-  },
-  {
-    number: 5,
-   
-  },
+  { number: 1 },
+  { number: 2 },
+  { number: 3 },
+  { number: 4 },
+  { number: 5 },
 ];
 
-// Coordenadas dos círculos no SVG
 const svgPositions = [
   { x: 120, y: 115 },
   { x: 340, y: 115 },
@@ -34,8 +19,8 @@ const svgPositions = [
   { x: 780, y: 115 },
   { x: 1000, y: 115 },
 ];
-// Estilos inline para os elementos SVG
-const styles = {
+
+const stylesInline = {
   circle: {
     filter: "drop-shadow(0 0 4px rgba(0,0,0,0.5))",
   },
@@ -52,25 +37,34 @@ const Process = () => {
       <div className="curved-dividertop-svg">
         <img src={curva_top} alt="Divisor Curvado" />
       </div>
-      <section id="process" className="">
-        <h2>
-          Nossos <br /> Processos
-        </h2>
 
-        <div className="process-flow">
-          
-          <div className="process-card analistas">
-            <h3>2. Analista de dados</h3>
-            <p>Analistas estruturam e treinam classificadores de dados específicos para cada cliente. Os analistas de dados realizam verificações frequentes de qualidade.</p>
-          </div>
+      <section id="process">
+        <Container>
+          <div className="contentWrapper">
+            <h2>
+              Nossos <br /> Processos
+            </h2>
 
-          <div className="process-card especialistas">
-            <h3>4. Especialistas</h3>
-            <p>Especialistas recebem dados organizados por meio de dashboards e criam análises baseadas em narrativas.</p>
-          </div>
-        </div>
+            <div className="process-flow">
+              <div className="process-card analistas">
+                <h3>2. Analista de dados</h3>
+                <p>
+                  Analistas estruturam e treinam classificadores de dados
+                  específicos para cada cliente. Os analistas de dados realizam
+                  verificações frequentes de qualidade.
+                </p>
+              </div>
 
-        <div style={{ overflowX: "auto", display: "flex", justifyContent: "center" }}>
+              <div className="process-card especialistas">
+                <h3>4. Especialistas</h3>
+                <p>
+                  Especialistas recebem dados organizados por meio de dashboards
+                  e criam análises baseadas em narrativas.
+                </p>
+              </div>
+            </div>
+
+            <div style={{ overflowX: "auto", display: "flex", justifyContent: "center" }}>
           <svg
             viewBox="0 0 1300 230"
             xmlns="http://www.w3.org/2000/svg"
@@ -91,45 +85,49 @@ const Process = () => {
             <path d="M897.552 90.356L923.163 123.842L871.154 123.225L897.552 90.356Z" fill="#54A8EE" />
 
             {steps.map((step, index) => (
-              <g key={step.number}>
-                <circle
-                  cx={svgPositions[index].x}
-                  cy={svgPositions[index].y}
-                  r="70"
-                  fill="#040A25"
-                  style={styles.circle}
-                />
-                <text
-                  x={svgPositions[index].x - 20}
-                  y={svgPositions[index].y + 20}
-                  fill="#fff"
-                  style={styles.circleText}
-                >
-                  {step.number}
-                </text>
-              </g>
-            ))}
-          </svg>
-        </div>
+                  <g key={step.number}>
+                    <circle
+                      cx={svgPositions[index].x}
+                      cy={svgPositions[index].y}
+                      r="70"
+                      fill="#040A25"
+                      style={stylesInline.circle}
+                    />
+                    <text
+                      x={svgPositions[index].x - 20}
+                      y={svgPositions[index].y + 20}
+                      fill="#fff"
+                      style={stylesInline.circleText}
+                    >
+                      {step.number}
+                    </text>
+                  </g>
+                ))}
+              </svg>
+            </div>
 
-        <div className="process-flow_2">
-          
-          <div className="process-card dados">
-            <h3>1. Dados</h3>
-            <p>Os dados são coletados através de diversas fontes.</p>
+            <div className="process-flow_2">
+              <div className="process-card dados">
+                <h3>1. Dados</h3>
+                <p>Os dados são coletados através de diversas fontes.</p>
+              </div>
+              <div className="process-card ia">
+                <h3>3. IA</h3>
+                <p>
+                  A equipe de IA desenvolve agentes com base no trabalho dos analistas
+                  de dados, realizando verificações frequentes de controle de qualidade.
+                </p>
+              </div>
+              <div className="process-card produtos">
+                <h3>5. Produtos e soluções</h3>
+                <p>
+                  A equipe de desenvolvimento cria produtos em tempo real adaptados às
+                  necessidades dos clientes.
+                </p>
+              </div>
+            </div>
           </div>
-
-          <div className="process-card ia">
-            <h3>3. IA</h3>
-            <p>A equipe de IA desenvolve agentes com base no trabalho dos analistas de dados, realizando verificações frequentes de controle de qualidade.</p>
-          </div>
-
-          <div className="process-card produtos">
-            <h3>5. Produtos e soluções</h3>
-            <p>A equipe de desenvolvimento cria produtos em tempo real adaptados às necessidades dos clientes.</p>
-          </div>
-        </div>
-
+        </Container>
       </section>
 
       <div className="curved-divider-svg">

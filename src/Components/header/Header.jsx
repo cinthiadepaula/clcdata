@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import styles from "./Header.module.css";
 import logo from "./../../assets/logo.png";
 
-
 function Header() {
   const [isMobile, setIsMobile] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,7 +22,10 @@ function Header() {
       <div className={styles.header}>
         <img src={logo} className={styles.logo} alt="Logo" />
         {isMobile ? (
-          <button onClick={() => setMenuOpen(!menuOpen)} className={styles.hamburger}>
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className={styles.hamburger}
+          >
             ☰
           </button>
         ) : (
@@ -35,8 +37,9 @@ function Header() {
           </nav>
         )}
       </div>
-      {isMobile && menuOpen && (
-        <div className={styles.drawer}>
+
+      {isMobile && (
+        <div className={`${styles.drawer} ${menuOpen ? styles.open : ''}`}>
           <nav className={styles.navMobile}>
             <a href="#about" className={styles.link} onClick={() => setMenuOpen(false)}>Quem somos</a>
             <a href="#solution" className={styles.link} onClick={() => setMenuOpen(false)}>O que fazemos</a>
