@@ -51,7 +51,7 @@
 }
 
 .subTitle {
-  font-size: clamp(18px, 2vw, 28px);
+  font-size: clamp(18px, 1vw, 28px);
   margin-bottom: clamp(10px, 1.5vw, 20px);
   font-style: italic;
   text-align: left;
@@ -112,6 +112,71 @@
   width: 10rem;
   
 }
+
+.topicWrapper {
+  margin-bottom: 1.5rem;
+}
+
+.topicButton {
+  background-color: transparent;
+  color: #8FBAFF;
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  width: 100%;
+  text-align: left;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: color 0.3s ease;
+  font-family: 'Orbitron', sans-serif; /* Fonte futurista (adicione no index.html ou CSS global) */
+}
+
+.topicButton:hover {
+  color: #8FBAFF;
+}
+
+.arrow {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.subItems {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.6s ease, opacity 0.5s ease;
+  margin-top: 0.5rem;
+  padding-left: 1.2rem;
+  border-left: 2px solid #00d0ff22;
+  animation: none;
+}
+
+.open {
+  max-height: 800px; /* Ajuste conforme o conteúdo */
+  opacity: 1;
+  animation: aiGlow 1s ease-out;
+}
+
+@keyframes aiGlow {
+  0% {
+    box-shadow: 0 0 5px #8FBAFF;
+  }
+  50% {
+    box-shadow: 0 0 10px #0090D8;
+  }
+  100% {
+    box-shadow: 0 0 5px #8FBAFF;
+  }
+}
+
 /* Mobile ajustes */
 @media (max-width: 768px) {
   .section{

@@ -21,10 +21,15 @@ function About() {
               />
             </div>
             <p className={styles.paragraph}>
-              Somos especialistas em transformar dados em soluções sob medida.
-              Trabalhamos de forma estratégica, utilizando relatórios e ferramentas personalizadas para identificar problemas, gerenciar situações desafiadoras e entender a fundo o ambiente digital de cada cliente.
-              Acompanhamos campanhas, analisamos tendências e fornecemos informações valiosas para que nossos clientes se comuniquem de maneira eficaz e forte na internet.
-              Nosso compromisso é encontrar o melhor caminho para o sucesso, com inteligência, precisão e visão estratégica.
+              A CLC Data é uma empresa de inteligência de dados e monitoramento que transforma informação em estratégia com agilidade, precisão e profundidade.
+              <br/><br />
+Coletamos e analisamos dados de todo o ecossistema digital: redes sociais, veículos de imprensa, blogs, fóruns, podcasts, plataformas públicas, discursos oficiais e bastidores políticos. Utilizamos as tecnologias mais avançadas do mercado, incluindo ferramentas proprietárias, inteligência artificial e soluções modernas de coleta e leitura de dados, para garantir uma análise profunda, em tempo real, das conversas que moldam percepções, reputações e contextos.
+<br /><br />
+Nosso maior diferencial está na combinação entre tecnologia de ponta e capital humano altamente qualificado.
+<br /><br />
+Nosso time é formado por cientistas políticos, estrategistas, analistas de dados e especialistas em BI que atuam de forma integrada para interpretar dados com profundidade, construir diagnósticos, prever cenários e propor ações estratégicas concretas, seja em momentos de crise, posicionamento de marca, lançamentos ou construção de autoridade.
+<br /><br />
+Nosso lema resume nossa forma de atuação: monitorar, entender e agir.
             </p>
           </div>
         </Container>

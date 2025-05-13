@@ -29,8 +29,8 @@ function Hero() {
     <header className={heroClasses}>
       <Container>
         <div className={styles.hero__textContainer}>
-          <TypingLine text="Transformamos" delay={0.5} />
-          <TypingLine text="dados em estratégias" delay={2} />
+          <TypingLine text="Monitorar," delay={0.5} /><br></br>
+          <TypingLine text="Entender, Agir." delay={2} />
         </div>
       </Container>
     </header>
