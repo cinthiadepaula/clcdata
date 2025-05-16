@@ -27,7 +27,8 @@ const topics = [
       "Planejamento estratégico de comunicação e reputação com base nos dados coletados",
       "Planos de ação para mitigação de riscos e blindagem reputacional",
       "Estratégias para momentos sensíveis, lançamentos, crises ou campanhas",
-      "Equipe de interação estratégica (community managers) para atuação direta nos canais digitais"
+      "Equipe de interação estratégica (community managers) para atuação direta nos canais digitais",
+      "Gestão de Crise"
     ]
   },
   {
