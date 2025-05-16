@@ -1,11 +1,11 @@
 .contentWrapper {
   background-color: #030014;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center; /* Alinha todos os itens ao centro */
   align-items: center;
   gap: clamp(20px, 5vw, 60px);
-  padding: clamp(20px, 1vw, 60px);
+ 
   margin: 0 auto; /* Centraliza o conteúdo */
   width: 100%;
   max-width: 1200px; /* Ajusta a largura máxima */
@@ -29,13 +29,13 @@
 }
 
 .textContainer {
-  
+
   flex: 1;
-  min-width: 150px;
-  max-width: 250px;
+  max-width: 700px;
+  min-width: 610px;
   text-align: left;
   z-index: 2;
-  margin-left: 12rem;
+ 
 }
 
 .gradientText {
@@ -51,10 +51,12 @@
 
 .iconSeta {
   width: clamp(30px, 5vw, 50px);
+  transform: rotate(90deg);
+    transition: transform 0.3s ease;
 }
 
 .paragraph {
- 
+
   flex: 2;
   max-width: 600px;
   font-family: "Inter", sans-serif;
