@@ -32,7 +32,7 @@ const topics = [
     ]
   },
   {
-    title: "4. Consultoria de Inovação",
+    title: "4. Consultoria em Inovação",
     items: [
       "Acompanhamento das principais tendências em tecnologia e comportamento digital",
       "Mapeamento e recomendação de novas ferramentas, plataformas e formatos de comunicação",
