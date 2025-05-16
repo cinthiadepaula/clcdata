@@ -58,7 +58,7 @@
   flex: 2;
   max-width: 600px;
   font-family: "Inter", sans-serif;
-  font-size: clamp(12px, 0.5vw, 16px);
+  font-size: 1.2rem;
   line-height: 1.6;
   color: white;
   text-align: left;
