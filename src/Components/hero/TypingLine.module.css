@@ -1,11 +1,12 @@
 .typingLine {
     display: inline-flex;
-    font-family: 'Inter', Courier, monospace;
+    font-family: 'Inter', serif;
     color: #69c5ff;
-    font-size: 3rem;
+    font-size: clamp(28px, 6vw, 48px);
     font-weight: bold;
     line-height: 1.2;
     white-space: nowrap;
+   
   }
   
   .char {
@@ -27,6 +28,8 @@
   @media (max-width: 768px) {
     .typingLine {
       font-size: 40px;
+      
     }
+    
   }
   

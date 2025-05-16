@@ -1,8 +1,7 @@
 /* Container.module.css */
 .container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem; /* Espaço lateral para evitar colar na borda */
-  width: 100%;
-  box-sizing: border-box;
+  padding: 0 clamp(20px, 5vw, 60px); /* controla espaçamento lateral */
 }

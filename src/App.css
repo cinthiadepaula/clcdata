@@ -84,7 +84,8 @@ section {
   max-width: 1200px; /* Limita a largura do conteúdo */
   width: 100%;
   margin: 0 auto; /* Centraliza o container */
-  padding: 0 20px; /* Padding lateral */
+  padding: clamp(20px, 1vw, 60px);
+  box-sizing: border-box;
 }
 
 
