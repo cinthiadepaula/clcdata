@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import check from "./../../assets/fi.svg";
 import styles from "./Solutions.module.css";
 import Container from "../container/Container";
-import curva from "./../../assets/curva_top.svg";
 
 const topics = [
   {
@@ -28,10 +27,8 @@ const topics = [
       "Planejamento estratégico de comunicação e reputação com base nos dados coletados",
       "Planos de ação para mitigação de riscos e blindagem reputacional",
       "Estratégias para momentos sensíveis, lançamentos, crises ou campanhas",
-      "Equipe de interação estratégica (community managers) para atuação direta nos canais digitais",
-      "Nosso trabalho é dinâmico, estratégico e orientado a resultado. Atuamos lado a lado com o cliente para garantir que os dados sirvam a uma estratégia concreta e eficaz."
+      "Equipe de interação estratégica (community managers) para atuação direta nos canais digitais"
     ]
-  
   },
   {
     title: "4. Consultoria de Inovação",
@@ -45,41 +42,26 @@ const topics = [
 ];
 
 function Solutions() {
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const toggleTopic = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   return (
-    <>
-      <section id="solution" className={styles.section}>
-        <Container>
-          <div className={styles.contentWrapper}>
-            <h1 className={styles.gradientText}>
-              O que<br />Fazemos
-            </h1>
-            <div className={styles.textContainer}>
-              <h2 className={styles.subTitle}>
-                <i>Na CLC Data, oferecemos uma solução completa de inteligência e ação estratégica, que pode ser contratada de forma integrada ou por etapas específicas:</i>
-              </h2>
+    <section id="solution" className={styles.section}>
+      <Container>
+        <div className={styles.contentWrapper}>
+          <h1 className={styles.gradientText}>
+            O que<br />Fazemos
+          </h1>
+          <div className={styles.textContainer}>
+            <h2 className={styles.subTitle}>
+              <i>
+                Na CLC Data, oferecemos uma solução completa de inteligência e ação estratégica, que pode ser contratada de forma integrada ou por etapas específicas:
+              </i>
+            </h2>
 
-              <ul className={styles.ul}>
-                {topics.map((topic, index) => (
-                  <li key={index} className={styles.topicWrapper}>
-                    <button
-                      className={styles.topicButton}
-                      onClick={() => toggleTopic(index)}
-                    >
-                      {topic.title}
-                      <span className={`${styles.arrow} ${openIndex === index ? styles.rotate : ""}`}>▼</span>
-                    </button>
-
-                    <ul
-                      className={`${styles.subItems} ${
-                        openIndex === index ? styles.open : ""
-                      }`}
-                    >
+            <ul className={styles.ul}>
+              {topics.map((topic, index) => (
+                <React.Fragment key={index}>
+                  <li className={styles.topicWrapper}>
+                    <div className={styles.topicTitle}>{topic.title}</div>
+                    <ul className={styles.subItemsAlwaysOpen}>
                       {topic.items.map((item, idx) => (
                         <li key={idx} className={styles.listItem}>
                           <img src={check} className={styles.icon} alt="check" />
@@ -88,17 +70,19 @@ function Solutions() {
                       ))}
                     </ul>
                   </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </Container>
-      </section>
 
-      <div className={styles.dividersvg}>
-        <img src={curva} alt="Divisor Curvado" />
-      </div>
-    </>
+                  {index === 2 && (
+                    <p className={styles.finalText}>
+                      Nosso trabalho é dinâmico, estratégico e orientado a resultado. Atuamos lado a lado com o cliente para garantir que os dados sirvam a uma estratégia concreta e eficaz.
+                    </p>
+                  )}
+                </React.Fragment>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </Container>
+    </section>
   );
 }
 

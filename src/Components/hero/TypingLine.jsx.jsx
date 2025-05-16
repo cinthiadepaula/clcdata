@@ -1,6 +1,6 @@
-// components/TypingLine.jsx
+// TypingLine.jsx
 import { motion } from 'framer-motion';
-import styles from './TypingLine.module.css'; // CSS para o cursor
+import styles from './TypingLine.module.css';
 
 export function TypingLine({ text, delay = 0 }) {
   const letters = Array.from(text);
@@ -10,7 +10,7 @@ export function TypingLine({ text, delay = 0 }) {
     visible: {
       transition: {
         delay,
-        staggerChildren: 0.05,
+        staggerChildren: 0.08,
       },
     },
   };
@@ -32,15 +32,10 @@ export function TypingLine({ text, delay = 0 }) {
       className={styles.typingLine}
     >
       {letters.map((char, i) => (
-        <motion.span
-          key={i}
-          className={styles.char}
-          variants={child}
-        >
+        <motion.span key={i} className={styles.char} variants={child}>
           {char === ' ' ? '\u00A0' : char}
         </motion.span>
       ))}
-      <span className={styles.cursor}>|</span>
     </motion.div>
   );
 }

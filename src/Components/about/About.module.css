@@ -1,5 +1,5 @@
 .contentWrapper {
-  
+  background-color: #030014;
   display: flex;
   flex-direction: row;
   justify-content: center; /* Alinha todos os itens ao centro */
@@ -58,7 +58,7 @@
   flex: 2;
   max-width: 600px;
   font-family: "Inter", sans-serif;
-  font-size: clamp(14px, 1vw, 18px);
+  font-size: clamp(12px, 0.5vw, 16px);
   line-height: 1.6;
   color: white;
   text-align: left;
@@ -71,19 +71,25 @@
     display: flex;
     flex-direction: column;
     
+    
   }
   .textContainer {
     width: 100%;
     font-weight: 400;
     max-width: 500px;
     margin: 0;
-    padding: 1rem;
+    padding: 0rem;
     text-align: left;
+    
   }
 
   .gradientText {
     font-size: 40px;
     text-align: left;
+  }
+
+  .paragraph{
+    font-size:16px;
   }
 
   .iconSeta {

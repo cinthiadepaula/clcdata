@@ -2,7 +2,7 @@
 .section {
   padding: clamp(40px, 5vw, 100px) 0;
   position: relative;
-  background-color: #010016;
+  background-color: #030014;
   color: white;
   z-index: 1;
   width: 100%; /* Garante que a seção ocupe 100% da largura */
@@ -60,14 +60,14 @@
 .ul {
   list-style: none;
   padding: 0;
-  font-size: clamp(14px, 1.5vw, 18px);
+   font-size: clamp(12px, 0.5vw, 16px);
   line-height: 1.8;
   text-align: left;
 }
 
 .listItem {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: left;
   gap: 10px;
   transition: transform 0.3s ease;
@@ -78,10 +78,11 @@
 }
 
 .icon {
+ padding-top: 0.09rem;
   width: clamp(14px, 1.2vw, 18px);
   margin-right: 8px;
-  vertical-align: middle;
   transition: transform 0.3s ease;
+  
 }
 
 .icon:hover {
@@ -117,26 +118,23 @@
   margin-bottom: 1.5rem;
 }
 
-.topicButton {
-  background-color: transparent;
-  color: #8FBAFF;
+.topicTitle {
   font-weight: bold;
-  font-size: 20px;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem 0;
-  width: 100%;
-  text-align: left;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transition: color 0.3s ease;
-  font-family: 'Orbitron', sans-serif; /* Fonte futurista (adicione no index.html ou CSS global) */
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.topicButton:hover {
-  color: #8FBAFF;
+.subItemsAlwaysOpen {
+  display: block;
+  padding-left: 1rem;
+}
+
+.finalText {
+  margin: 1.5rem 0;
+  font-size: clamp(12px, 0.5vw, 16px);
+  line-height: 1.6;
+  color: white;
 }
 
 .arrow {
@@ -208,10 +206,15 @@
 
   .ul {
     padding: 0;
+    
+   
   }
 
   .listItem {
-    font-size: clamp(16px, 2.5vw, 20px);
+   font-size:16px;
+   
+
+   
   }
 
   .textContainer {
@@ -221,6 +224,18 @@
     padding: 1rem;
     text-align: left;
   }
+
+  .finalText {
+    font-size:16px;
+  }
+
+  .icon {
+ 
+  width: clamp(14px, 1.2vw, 18px);
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+   padding-top: 0.4rem;
+}
 
  
 }

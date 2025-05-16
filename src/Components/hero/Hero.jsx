@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import backgroundHeader from "../../assets/background_header.png";
 import styles from "./Hero.module.css";
-import { TypingLine } from "./TypingLine.jsx";
+import { TypingBlock } from "./TypingBlock.jsx";
 import Container from "../container/Container.jsx";
 
 function Hero() {
@@ -29,8 +29,8 @@ function Hero() {
     <header className={heroClasses}>
       <Container>
         <div className={styles.hero__textContainer}>
-          <TypingLine text="Monitorar," delay={0.5} /><br></br>
-          <TypingLine text="Entender, Agir." delay={2} />
+          <TypingBlock lines={["Monitorar", "Entender", "Agir"]} />
+          
         </div>
       </Container>
     </header>
