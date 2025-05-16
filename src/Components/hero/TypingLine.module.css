@@ -2,7 +2,7 @@
     display: inline-flex;
     font-family: 'Inter', serif;
     color: #69c5ff;
-    font-size: clamp(28px, 6vw, 48px);
+    font-size: 5rem;
     font-weight: bold;
     line-height: 1.2;
     white-space: nowrap;
