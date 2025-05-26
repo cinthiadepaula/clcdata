@@ -5,7 +5,7 @@ import Container from "../container/Container";
 
 const topics = [
   {
-    title: "1. Monitorar",
+    title: "Monitorar",
     items: [
       "Monitoramento contínuo 24/7 de redes sociais, imprensa, blogs, podcasts e discursos públicos",
       "Ferramentas proprietárias e uso de IA para leitura, análise e cruzamento de grandes volumes de dados",
@@ -13,7 +13,7 @@ const topics = [
     ]
   },
   {
-    title: "2. Entender",
+    title: "Entender",
     items: [
       "Diagnóstico aprofundado de marcas, pessoas e cenários digitais",
       "Dashboards customizados, interativos e atualizados em tempo real",
@@ -22,7 +22,7 @@ const topics = [
     ]
   },
   {
-    title: "3. Agir",
+    title: "Agir",
     items: [
       "Planejamento estratégico de comunicação e reputação com base nos dados coletados",
       "Planos de ação para mitigação de riscos e blindagem reputacional",
@@ -32,7 +32,7 @@ const topics = [
     ]
   },
   {
-    title: "4. Consultoria em Inovação",
+    title: "Consultoria em Inovação",
     items: [
       "Acompanhamento das principais tendências em tecnologia e comportamento digital",
       "Mapeamento e recomendação de novas ferramentas, plataformas e formatos de comunicação",
@@ -44,23 +44,20 @@ const topics = [
 
 function Solutions() {
   return (
-    <section id="solution" className={styles.section}>
-      <Container>
-        <div className={styles.contentWrapper}>
-          <h1 className={styles.gradientText}>
-            O que<br />Fazemos
-          </h1>
-          <div className={styles.textContainer}>
-            <h2 className={styles.subTitle}>
-              <i>
-                Na CLC Data, oferecemos uma solução completa de inteligência e ação estratégica, que pode ser contratada de forma integrada ou por etapas específicas:
-              </i>
-            </h2>
+    <>
+      <section id="solution" className={styles.section}>
+        <Container>
+          <div className={styles.glow}></div>
+          <div className={styles.contentWrapper}>
+            <h1 className={styles.gradientText}>O que fazemos</h1>
+            <p className={styles.subTitle}>
+              Na CLC Data, oferecemos uma solução completa de inteligência e ação estratégica, que pode ser contratada de forma integrada ou por etapas específicas:
+            </p>
 
-            <ul className={styles.ul}>
-              {topics.map((topic, index) => (
-                <React.Fragment key={index}>
-                  <li className={styles.topicWrapper}>
+            <div className={styles.textContainer}>
+              <ul className={styles.topicsGrid}>
+                {topics.map((topic, index) => (
+                  <li className={styles.topicWrapper} key={index}>
                     <div className={styles.topicTitle}>{topic.title}</div>
                     <ul className={styles.subItemsAlwaysOpen}>
                       {topic.items.map((item, idx) => (
@@ -71,19 +68,23 @@ function Solutions() {
                       ))}
                     </ul>
                   </li>
-
-                  {index === 2 && (
-                    <p className={styles.finalText}>
-                      Nosso trabalho é dinâmico, estratégico e orientado a resultado. Atuamos lado a lado com o cliente para garantir que os dados sirvam a uma estratégia concreta e eficaz.
-                    </p>
-                  )}
-                </React.Fragment>
-              ))}
-            </ul>
+                ))}
+              </ul>
+            </div>
           </div>
-        </div>
-      </Container>
-    </section>
+          <div className={styles.glow2}></div>
+        </Container>
+      </section>
+
+      <div className={styles.text_rodape}>
+        <p>
+          Nosso trabalho é dinâmico, estratégico e <br />
+          orientado a resultado. Atuamos lado a lado com <br />
+          o cliente para garantir que os dados sirvam a <br />
+          uma estratégia concreta e eficaz.
+        </p>
+      </div>
+    </>
   );
 }
 

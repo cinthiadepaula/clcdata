@@ -8,6 +8,7 @@ import About from "./Components/about/About";
 import Contact from "./Components/contact/Contact";
 import EclipseBackground from "./Components/backgorundEclipse/EclipseBackGround";
 import Footer from "./Components/footer/Footer";
+import WhatsAppButton from "./Components/buttonWhatsApp/WhatsAppButton";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
        
         <Contact />
        <Footer />
+       <WhatsAppButton />
        
 
     </div>

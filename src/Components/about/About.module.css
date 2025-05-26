@@ -1,9 +1,9 @@
 .contentWrapper {
-  background-color: #030014;
+  background-color: #003578;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center; /* Alinha todos os itens ao centro */
-  align-items: center;
+  align-items: flex-start; 
   gap: clamp(20px, 5vw, 60px);
  
   margin: 0 auto; /* Centraliza o conteúdo */
@@ -18,10 +18,10 @@
 .glow {
   position: absolute;
   right: 0;
-  top: 90%;
-  width: 80vw;
-  height: 20vw;
-  background: radial-gradient(circle, #00305D 10%, rgba(0, 0, 0, 0) 60%);
+  top: 60%;
+  width: 90vw;
+  height: 40vw;
+  background: radial-gradient(circle,#0168c9b7 10%, rgba(0, 0, 0, 0) 30%);
   z-index: 0;
   pointer-events: none;
   filter: blur(80px);
@@ -29,19 +29,29 @@
 }
 
 .textContainer {
-
-  flex: 1;
-  max-width: 700px;
-  min-width: 610px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 950px;
+  min-width: 70px;
   text-align: left;
   z-index: 2;
  
 }
+.title{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.title h2 {
+  margin: 0;
+}
 
 .gradientText {
+ 
   font-size: clamp(28px, 6vw, 48px);
   margin-bottom: clamp(10px, 2vw, 20px);
-  background-image: linear-gradient(to right, #0090D8, #8FBAFF);
+   background-image: linear-gradient(to right, #FFFFFF, #70E6FB);
   -webkit-background-clip: text;
   color: transparent;
   font-weight: bold;
@@ -50,9 +60,17 @@
 }
 
 .iconSeta {
+
   width: clamp(30px, 5vw, 50px);
-  transform: rotate(90deg);
+  transform: rotate(180deg);
     transition: transform 0.3s ease;
+}
+
+.iconGroup {
+  max-width: 420px;  /* Garante que não ultrapasse o conteúdo textual */
+  height: auto;
+  width: auto;
+  object-fit: contain;
 }
 
 .paragraph {
@@ -78,13 +96,16 @@
     padding-left: 5px;
     
   }
+
+  .curva_top{
+    width: 10rem;
+  }
   .textContainer {
-   
     width: 100%;
     font-weight: 400;
     min-width: 335px;
     max-width: 300px;
-    margin: 0;
+    margin-top: 3rem;
     padding: 0rem;
     text-align: left;
     
@@ -99,9 +120,13 @@
     font-size:16px;
   }
 
+  .iconGroup {
+ display: none;
+}
+
   .iconSeta {
     width: 3rem;
-    transform: rotate(90deg);
+    transform: rotate(180deg);
     transition: transform 0.3s ease;
   }
 }

@@ -1,37 +1,36 @@
-// TypingBlock.jsx
-import { useEffect, useState } from 'react';
-import { TypingLine } from './TypingLine.jsx';
+import React, { useEffect, useState } from "react";
 
-export function TypingBlock({ lines }) {
-  const [visibleCount, setVisibleCount] = useState(0);
-
-  const charDelay = 0.05;
-  const charDuration = 0.1;
-
-  // Quebrar todas as linhas em palavras, achatar em um array só
-  const words = lines.flatMap(line => line.split(' '));
+export function TypingBlock({ lines, typingSpeed = 150, deletingSpeed = 100, delayBetweenWords = 1000 }) {
+  const [currentLineIndex, setCurrentLineIndex] = useState(0);
+  const [displayedText, setDisplayedText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    if (visibleCount >= words.length) return;
+    const currentLine = lines[currentLineIndex];
 
-    const currentWordLength = words[visibleCount].length;
-    const typingTime = currentWordLength * (charDelay + charDuration);
+    let timeout;
 
-    const timeout = setTimeout(() => {
-      setVisibleCount((prev) => prev + 1);
-    }, typingTime * 1000 + 300); 
+    if (!isDeleting && displayedText.length < currentLine.length) {
+      // Digitar letra a letra
+      timeout = setTimeout(() => {
+        setDisplayedText(currentLine.slice(0, displayedText.length + 1));
+      }, typingSpeed);
+    } else if (!isDeleting && displayedText.length === currentLine.length) {
+      // Aguarda antes de começar a apagar
+      timeout = setTimeout(() => setIsDeleting(true), delayBetweenWords);
+    } else if (isDeleting && displayedText.length > 0) {
+      // Apaga letra a letra
+      timeout = setTimeout(() => {
+        setDisplayedText(currentLine.slice(0, displayedText.length - 1));
+      }, deletingSpeed);
+    } else if (isDeleting && displayedText.length === 0) {
+      // Vai para a próxima palavra e começa a digitar
+      setIsDeleting(false);
+      setCurrentLineIndex((prev) => (prev + 1) % lines.length);
+    }
 
     return () => clearTimeout(timeout);
-  }, [visibleCount, words]);
+  }, [displayedText, isDeleting, currentLineIndex, lines, typingSpeed, deletingSpeed, delayBetweenWords]);
 
-  return (
-    <div>
-      {words.slice(0, visibleCount + 1).map((word, index) => (
-        <div key={index} style={{ whiteSpace: 'nowrap' }}>
-          <TypingLine text={word} />
-        </div>
-      ))}
-    </div>
-  );
+  return <h1>{displayedText}<span className="cursor">|</span></h1>;
 }
-

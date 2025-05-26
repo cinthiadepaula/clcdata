@@ -1,11 +1,12 @@
 .footerSection {
     padding: 1rem 0;
+    background-color: rgba(36, 36, 36, 1);
   }
   
   .line {
     width: 80%;
     height: 1px;
-    background: linear-gradient(to right, transparent, #1a1a2e, transparent);
+    background: linear-gradient(to right, transparent, #585858, transparent);
     border: none;
     margin: 20px auto;
   }

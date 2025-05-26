@@ -12,7 +12,7 @@ html, body {
   overflow-x: hidden; /* Impede o overflow horizontal */
   overflow-y: auto; /* Permite o overflow vertical se necessário */
   box-sizing: border-box;
-  background: rgba(3, 0, 20, 1);
+  background: #003578;
   color: white;
   font-family: "Inter", sans-serif;
 }

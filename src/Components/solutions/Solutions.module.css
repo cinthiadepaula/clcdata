@@ -1,67 +1,96 @@
-/* Estilo comum para a seção */
 .section {
   padding: clamp(40px, 5vw, 100px) 0;
   position: relative;
-  background-color: #030014;
+  background: linear-gradient(180deg, #001932 0%, #004A8F 100%);
   color: white;
   z-index: 1;
-  width: 100%; /* Garante que a seção ocupe 100% da largura */
+  width: 100%;
   box-sizing: border-box;
   padding-left: 10rem;
 }
 
 .contentWrapper {
- 
   display: flex;
-  flex-direction: row;
-  justify-content: center; /* Alinha todos os itens ao centro */
+  flex-direction: column;
+  justify-content: center; 
   align-items: center;
-  gap: clamp(20px, 5vw, 60px);
-  padding: clamp(20px, 1vw, 60px);
-  margin: 0 auto; /* Centraliza o conteúdo */
+  margin: 0 auto;
   width: 100%;
-  max-width: 1200px; /* Ajusta a largura máxima */
+  max-width: 1200px;
   box-sizing: border-box;
   z-index: 1;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .textContainer {
- 
+  display: grid;
   flex: 1;
   min-width: 150px;
-  max-width: 600px; /* Define a largura máxima da seção de texto */
   text-align: left;
   z-index: 2;
-  margin-left: 0px;
- 
-  
+  margin: 0px;
+  gap: 24px;
+  padding: 0;
+}
+
+.glow {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 900px;
+  background: radial-gradient(circle, rgba(87, 159, 252, 0.466) 0%, rgba(255, 255, 255, 0) 60%);
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+.glow2 {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 900px;
+  background: radial-gradient(circle, rgba(87, 159, 252, 0.466) 0%, rgba(255, 255, 255, 0) 60%);
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+.text_rodape {
+  background-color: rgba(0, 53, 120, 1);
+  padding: 5rem;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.text_rodape p {
+  width: 50%;
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 35px;
+  text-align: left;
 }
 
 .gradientText {
-
   font-size: clamp(28px, 6vw, 48px);
-  margin-bottom: clamp(10px, 2vw, 20px);
-  background-image: linear-gradient(to right, #0090D8, #8FBAFF);
+  background-image: linear-gradient(to right, #FFFFFF, #70E6FB);
   -webkit-background-clip: text;
   color: transparent;
   font-weight: bold;
   line-height: 1.2;
   text-align: left;
+  margin: 0;
+  padding: 0;
 }
 
 .subTitle {
-  font-size: 1.5rem;
-  margin-bottom: clamp(10px, 1.5vw, 20px);
-  font-style: italic;
-  text-align: left;
-}
-
-.ul {
-  list-style: none;
-  padding: 0;
-font-size: 1.2rem;
-  line-height: 1.8;
+  margin: 0;
+  width: 50rem;
+  font-size: 18px;
   text-align: left;
 }
 
@@ -70,172 +99,108 @@ font-size: 1.2rem;
   align-items: start;
   justify-content: left;
   gap: 10px;
-  transition: transform 0.3s ease;
-}
-
-.listItem:hover {
-  transform: scale(1.05);
 }
 
 .icon {
- padding-top: 0.09rem;
-  width: clamp(14px, 1.2vw, 18px);
+  padding-top: 0.09rem;
+  width: clamp(14px, 1.5vw, 18px);
   margin-right: 8px;
   transition: transform 0.3s ease;
-  
 }
 
-.icon:hover {
-  transform: rotate(20deg);
-}
-
-.glow {
-  position: absolute;
-  right: 0;
-  top: 70%;
-  width: 80vw;
-  height: 20vw;
-  background: radial-gradient(circle, #00305D 10%, rgba(0, 0, 0, 0) 60%);
-  z-index: 0;
-  pointer-events: none;
-  filter: blur(80px);
-  max-width: 100vw;
-}
-
-.dividersvg{
-  background-color: #D9D9D9;
-
-  
-}
-
-.dividersvg img{
-  background-color: #D9D9D9;
-  width: 10rem;
-  
+.topicsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  padding: 0 5rem;
+  list-style: none;
+  margin-top: 2rem;
 }
 
 .topicWrapper {
-  margin-bottom: 1.5rem;
+  width: 25rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #0070cb7e;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: white;
 }
 
 .topicTitle {
-  font-weight: bold;
-  font-size: 1.3rem;
+  color: #70E6FB;
+  font-weight: 600;
+  font-size: 1.9rem;
   margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
+  padding-left: 3rem;
 }
 
 .subItemsAlwaysOpen {
   display: block;
   padding-left: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  gap: 1rem;
 }
 
-.finalText {
-  margin: 1.5rem 0;
- font-size: 1.2rem;
-  line-height: 1.6;
-  color: white;
+.subItemsAlwaysOpen li {
+  padding-top: 0.5rem;
 }
 
-.arrow {
-  font-size: 18px;
-  transition: transform 0.3s ease;
-}
-
-.rotate {
-  transform: rotate(180deg);
-}
-
-.subItems {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.6s ease, opacity 0.5s ease;
-  margin-top: 0.5rem;
-  padding-left: 1.2rem;
-  border-left: 2px solid #00d0ff22;
-  animation: none;
-}
-
-.open {
-  max-height: 800px; /* Ajuste conforme o conteúdo */
-  opacity: 1;
-  animation: aiGlow 1s ease-out;
-}
-
-@keyframes aiGlow {
-  0% {
-    box-shadow: 0 0 5px #8FBAFF;
-  }
-  50% {
-    box-shadow: 0 0 10px #0090D8;
-  }
-  100% {
-    box-shadow: 0 0 5px #8FBAFF;
-  }
-}
-
-/* Mobile ajustes */
 @media (max-width: 768px) {
-  .section{
-    padding: 2rem;
+  .section {
+    padding: 2rem 0rem;
     margin: 0;
     z-index: 1;
-    width: 100%; 
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    padding-left: 0 !important;
   }
   .contentWrapper {
-
-    margin: 0;
-    padding: 0;
+    padding: 1.2rem;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: start;
+  }
+
+  .subTitle{
+    width: 20rem;
+  }
+
+  .topicsGrid {
+    display: flex;
+    flex-direction: column;
+   
     justify-content: left;
-  }
-
-  .gradientText {
-    font-size: 40px;
-    text-align: left;
-  }
-
-  .subTitle {
-    font-size: 22px;
-    text-align: left;
-  }
-
-  .ul {
-    padding: 0;
-    
-   
-  }
-
-  .listItem {
-   font-size:16px;
-   
-
-   
-  }
-
-  .textContainer {
+    padding: 0rem;
+    gap: 1.5rem;
     width: 100%;
-    max-width: 500px;
-    margin: 0;
-    padding: 1rem;
-    text-align: left;
+    box-sizing: border-box;
   }
 
-  .finalText {
-    font-size:16px;
+  .gradientText{
+    font-size: 3rem;
   }
 
-  .icon {
+  .topicWrapper {
+    width: 100%;
+    max-width: 25rem;
+    box-sizing: border-box;
+  }
+.text_rodape{
  
-  width: clamp(14px, 1.2vw, 18px);
-  margin-right: 8px;
-  transition: transform 0.3s ease;
-   padding-top: 0.4rem;
+  margin: 0;
+  padding: 2rem;
+}
+  .text_rodape p {
+   
+    width: 100%;
+    font-size:1.5rem;
+  }
 }
 
- 
-}
+
