@@ -79,9 +79,7 @@ function Solutions() {
       <div className={styles.text_rodape}>
         <p>
           Nosso trabalho é dinâmico, estratégico e <br />
-          orientado a resultado. Atuamos lado a lado com <br />
-          o cliente para garantir que os dados sirvam a <br />
-          uma estratégia concreta e eficaz.
+          orientado a resultado.
         </p>
       </div>
     </>

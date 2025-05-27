@@ -18,13 +18,9 @@ function About() {
             <div className={styles.textContainer}>
               <div className={styles.title}>
   <h2 id="about-heading" className={styles.gradientText}>
-    Quem Somos
+    Quem somos
   </h2>
-  <img
-    src={iconseta}
-    alt="Ícone seta azul decorativa"
-    className={styles.iconSeta}
-  />
+ 
 </div>
 
 

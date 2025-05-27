@@ -22,7 +22,7 @@ function Contact() {
 
         <span>
        <p><a>Política de Privacidade</a></p>
-        <p><a>Política de Coockies</a></p>
+        <p><a>Política de Cookies</a></p>
         </span>
         
        </div>
