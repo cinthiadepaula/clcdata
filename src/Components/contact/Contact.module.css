@@ -56,7 +56,9 @@
     font-size: 18px;
   }
 
-
+.button a{
+   color: rgba(0, 255, 81, 1);
+}
    
   .textContainer {
     display: flex;
