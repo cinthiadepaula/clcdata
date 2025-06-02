@@ -11,14 +11,13 @@ function Contact() {
       <div className={styles.contact}> 
       <img src={logo} className={styles.logo}/>
       <span>
-       <p>Telefone: (11) 94006-1609</p>
-       <p>WhatsApp: (11) 94006-1609</p>
+       <p>WhatsApp: (11) 94730-5663</p>
        <p>Email: adm@clcdata.com.br</p>
        </span>
        </div>
 
        <div className={styles.politic}>
-        <button className={styles.button}><a href="https://api.whatsapp.com/send/?phone=5511940061609&text&type=phone_number&app_absent=0" target="_blank">Fale conosco</a></button>
+        <button className={styles.button}><a href="https://api.whatsapp.com/send/?phone=5511947305663&text&type=phone_number&app_absent=0" target="_blank">Fale conosco</a></button>
 
         <span>
        <p><a>Política de Privacidade</a></p>

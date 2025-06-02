@@ -4,7 +4,7 @@ import "./WhatsAppButton.css"; // Importa o CSS
 const WhatsAppButton = () => {
   return (
     <a
-      href="https://wa.me/5511940061609"
+      href="https://wa.me/5511947305663"
       className="whatsapp-button"
       target="_blank"
       rel="noopener noreferrer"
